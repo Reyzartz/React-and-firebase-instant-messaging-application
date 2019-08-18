@@ -11,6 +11,9 @@
 # production
 /build
 
+#key
+/src/firebase_key.js
+
 # misc
 .DS_Store
 .env.local

@@ -33,26 +33,31 @@ class Login extends Component {
             }
         }
         return ( 
-        <main className="login_page">
-            <div className="login-form">
-                <h1>Login</h1>
+        <main className="form-page">
+            <div className="form-form">
+                <h1 className="form-header">Sign in</h1>
                 <form onSubmit={(e)=> submitSignUp(e)}>
-                    <label className="input-label">Enter Your Email</label>
-                    <br/>
-                    <input autoComplete='email' autoFocus onChange={(e)=>userTyping('email',e)} required id="input-email"/>
-                    <br/>
-                    <label className="input-label">Create a Password</label>
-                    <br/>
-                    <input type='password' autoFocus onChange={(e)=>userTyping('password',e)} required id="input-password"/>
-                    <br/>
-                    <input type="submit" id="submit-button" />
-                    <br/>
+                    
+                    <input autoComplete='email' 
+                        autoFocus onChange={(e)=>userTyping('email',e)}
+                        placeholder="Enter Your Email id" 
+                        required 
+                        id="input-email"/>
+
+                    <input type='password' 
+                        autoFocus onChange={(e)=>userTyping('password',e)} 
+                        required id="input-password"
+                        placeholder="Enter Your Password"/>
+                    
+                    <input 
+                        type="submit" 
+                        className="submit-btn"/>
+                    
                     {   
                         this.state.loginError ? <div>{this.state.loginError}</div> : null 
                     }
-                    <div>Don't have an Account</div>
-                    <br/>
-                        <Link to='/sign-up'>Sign up</Link>
+                    <div className="form-redirect-text">Don't have an Account? <Link to='/sign-up'>Sign up</Link> </div>
+                    
                 </form>
             </div>
         </main>

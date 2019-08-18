@@ -1,5 +1,27 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## npm install 
+to install all the node modules 
+
+##Create fireBase BackEnd
+
+.create a firebase repositary enalble authentication with email and password and then create two collection in database called users and
+chats
+
+.then create a file in the src folder calledn firebase_key.js
+and the paste your firebase keys in this format
+
+const Firebase_key={
+    apiKey: "",
+    authDomain: "",
+    databaseURL: "",
+    projectId: "",
+    storageBucket: "",
+    messagingSenderId: "",
+    appId: ""
+}
+export default Firebase_key;
+
 ## Available Scripts
 
 In the project directory, you can run:

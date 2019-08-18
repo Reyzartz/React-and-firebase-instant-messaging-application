@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './Sign-up.css'
 import {Link} from 'react-router-dom';
 import firebase from 'firebase';
 
@@ -66,30 +65,47 @@ class Sign_up extends Component {
             }
         
         return ( 
-            <main className="Sign_up_page">
-                <div className="Sign_up_form">
-                    <h1>Sign up</h1>
+            <main className="form-page">
+                <div className="form-form">
+                    <h1 className="form-header">Sign up</h1>
                     <form onSubmit={(e)=> submitSignUp(e)}>
-                        <label className="input-label">Enter Your Email</label>
-                        <br/>
-                        <input autoComplete='email' autoFocus onChange={(e)=>userTyping('email',e)} required id="input-email"/>
-                        <br/>
-                        <label className="input-label">Create a Password</label>
-                        <br/>
-                        <input type='password' autoFocus onChange={(e)=>userTyping('password',e)} required id="input-password"/>
-                        <br/>
-                        <label className="input-label">Confirm Your Password</label>
-                        <br/>
-                        <input type='password' autoFocus onChange={(e)=>userTyping('confirmPassword',e)} required id="input-confirm-password"/>
-                        <br/>
-                        <input type="submit" id="submit-button" />
+                        
+                        <input 
+                            autoComplete='email' 
+                            autoFocus onChange={(e)=>userTyping('email',e)} 
+                            required 
+                            id="input-email"
+                            placeholder="Enter Your Email id"/>
+   
+                        <input 
+                            type='password' 
+                            autoFocus 
+                            onChange={(e)=>userTyping('password',e)} 
+                            required 
+                            id="input-password"
+                            placeholder="Create a new Password"/>
+
+                        <input 
+                            type='password' 
+                            autoFocus 
+                            onChange={(e)=>userTyping('confirmPassword',e)} 
+                            required 
+                            id="input-confirm-password"
+                            placeholder="Re-enter Your new Password"/>
+                        
+                        <input 
+                            type="submit" 
+                            id="submit-button" 
+                            className="submit-btn"/>
+
+                            <div className="form-redirect-text">Already have an Account? <Link to='/login'>Log in</Link></div>
                     </form>
                     {   
                         this.state.signupError ? <span>{this.state.signupError}</span> : null 
                     }
-                        <span>Already have an Account</span>
-                        <br/>
-                        <Link to='/login'>Log in</Link>
+                        
+                        
+                        
                 </div>    
             </main>
              );
