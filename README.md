@@ -1,3 +1,7 @@
+# React and Firebase Instant Messaging Application
+
+![react-firebase-messageing](https://user-images.githubusercontent.com/47865866/103873472-d96de680-50f5-11eb-828a-e228ec92bb74.png)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## npm install 
